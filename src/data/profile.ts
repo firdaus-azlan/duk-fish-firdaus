@@ -37,10 +37,11 @@ export const projects: Project[] = [
 ]
 
 export const skills = [
-  { group: 'ERP', items: ['Infor SyteLine', 'Infor CloudSuite Industrial'] },
-  { group: 'Database', items: ['SQL Server', 'SQL', 'Stored Procedures'] },
-  { group: 'Development', items: ['JavaScript', 'TypeScript', 'React', 'REST API'] },
-  { group: 'Tools', items: ['Git', 'GitHub', 'Visual Studio Code'] },
+  { group: 'ERP', items: ['Infor SyteLine', 'Infor CloudSuite Industrial', 'Infor OS'] },
+  { group: 'Database', items: ['SQL Server', 'SQL', 'Stored Procedures', 'MySQL'] },
+  { group: 'Development', items: ['JavaScript', 'TypeScript', 'React', 'REST API', 'VB.NET', 'C#'] },
+  { group: 'Tools', items: ['Git', 'GitHub', 'Visual Studio Code', 'n8n', 'Airtable', 'Supabase'] },
+  { group: 'AI', items: ['Codex', 'Claude Code', 'Gemini'] },
 ]
 
 export const approach = [
