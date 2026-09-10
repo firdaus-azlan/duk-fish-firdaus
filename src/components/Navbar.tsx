@@ -9,7 +9,7 @@ export function Navbar() {
   const close = () => setOpen(false)
   return <header className="nav-wrap">
     <nav className="nav container" aria-label="Main navigation">
-      <a className="brand" href="#home" onClick={close} aria-label={`${profile.name} home`}><span className="brand-mark">S</span><span>{profile.name}</span></a>
+      <a className="brand" href="#home" onClick={close} aria-label={`${profile.name} home`}><span className="brand-mark">F</span><span>{profile.name}</span></a>
       <div className="nav-links">{links.map(([label, href]) => <a href={href} key={href}>{label}</a>)}</div>
       <a className="nav-contact" href="#contact">Let’s talk</a>
       <button className="menu-button" onClick={() => setOpen(!open)} aria-expanded={open} aria-label="Toggle navigation menu">{open ? <X /> : <Menu />}</button>

@@ -4,7 +4,7 @@ export type Project = { title: string; label: string; description: string; tags:
 
 // Replace bracketed placeholders here with your actual professional information.
 export const profile = {
-  name: '[YOUR NAME]',
+  name: 'Firdaus Azlan',
   title: 'Infor SyteLine / CloudSuite Industrial',
   role: 'ERP Technical Consultant',
   intro: 'I help teams get more value from SyteLine ERP through technical troubleshooting, thoughtful customizations, reliable integrations, reporting, SQL, and data migration.',
