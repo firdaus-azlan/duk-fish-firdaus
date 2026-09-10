@@ -10,5 +10,25 @@ import { Navbar } from './components/Navbar'
 import { Projects } from './components/Projects'
 import { Skills } from './components/Skills'
 
-function App() { return <><Navbar /><main><Hero /><About /><Expertise /><Modules /><Experience /><Projects /><Skills /><Approach /><Contact /></main><Footer /></> }
+function App() {
+  useEffect(() => {
+    const elements = Array.from(document.querySelectorAll<HTMLElement>('[data-reveal]'))
+    const show = (element: HTMLElement) => element.classList.add('is-visible')
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+      elements.forEach(show)
+      return
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => entries.forEach((entry) => entry.isIntersecting && show(entry.target as HTMLElement)),
+      { threshold: 0.14 },
+    )
+    elements.forEach((element) => observer.observe(element))
+    return () => observer.disconnect()
+  }, [])
+
+  return <><Navbar /><main><Hero /><About /><Expertise /><Modules /><Experience /><Projects /><Skills /><Approach /><Contact /></main><Footer /></>
+}
 export default App
+import { useEffect } from 'react'
