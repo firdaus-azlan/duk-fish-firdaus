@@ -1,0 +1,4 @@
+import { ArrowUpRight } from 'lucide-react'
+import { projects } from '../data/profile'
+import { SectionHeading } from './SectionHeading'
+export function Projects() { return <section id="projects" className="section projects"><div className="container"><SectionHeading kicker="Selected work" title="Technical projects that support ERP outcomes." text="Example projects — replace the descriptions, tags, and links with your actual work."/><div className="projects-grid">{projects.map((project) => <article className="project-card" key={project.title}><div><span className="project-label">{project.label}</span><h3>{project.title}</h3><p>{project.description}</p></div><div className="project-footer"><div className="tags">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div><span aria-label="Project details placeholder" className="project-arrow"><ArrowUpRight size={18}/></span></div></article>)}</div></div></section> }

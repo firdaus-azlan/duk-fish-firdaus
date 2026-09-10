@@ -1,0 +1,2 @@
+import { profile } from '../data/profile'
+export function Footer() { return <footer><div className="container footer-content"><div><strong>{profile.name}</strong><span>{profile.title} · {profile.role}</span></div><div className="footer-links"><a href="#home">Home</a><a href="#about">About</a><a href="#expertise">Expertise</a><a href="#experience">Experience</a><a href="#contact">Contact</a></div><p>© {new Date().getFullYear()} {profile.name}</p></div></footer> }
