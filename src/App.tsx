@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { About } from './components/About'
 import { Approach } from './components/Approach'
 import { Contact } from './components/Contact'
@@ -30,4 +31,3 @@ function App() {
   return <><Navbar /><main><Hero /><About /><Expertise /><Experience /><Projects /><Skills /><Approach /><Contact /></main><Footer /></>
 }
 export default App
-import { useEffect } from 'react'

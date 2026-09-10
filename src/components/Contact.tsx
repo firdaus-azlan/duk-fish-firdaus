@@ -2,9 +2,9 @@ import { Link2, Mail } from 'lucide-react'
 import { profile } from '../data/profile'
 import { SectionHeading } from './SectionHeading'
 
-const isPlaceholder = (value: string) => value.startsWith('[')
+const isConfigured = (value: string) => value && !value.startsWith('[')
 
 export function Contact() {
-  const emailLink = isPlaceholder(profile.email) ? undefined : `mailto:${profile.email}`
-  return <section id="contact" className="section contact"><div className="container contact-grid"><div><SectionHeading kicker="Contact" title="Let’s discuss your ERP challenge." text="Whether you need support for a SyteLine initiative, technical troubleshooting, or a future project, the first conversation starts here."/></div><div className="contact-card"><div className="contact-row"><Mail size={19}/><div><small>Email</small>{emailLink ? <a href={emailLink}>{profile.email}</a> : <span>{profile.email}</span>}</div></div><div className="contact-row"><Link2 size={19}/><div><small>LinkedIn</small><span>{profile.linkedIn}</span></div></div></div></div></section>
+  const emailLink = isConfigured(profile.email) ? `mailto:${profile.email}` : undefined
+  return <section id="contact" className="section contact"><div className="container contact-grid"><div><SectionHeading kicker="Contact" title="Let’s build something useful." text="I’m open to opportunities in software development, enterprise applications, data migration, system integration, automation, and related roles."/></div><div className="contact-card" data-reveal>{emailLink && <div className="contact-row"><Mail size={19}/><div><small>Email</small><a href={emailLink}>{profile.email}</a></div></div>}{isConfigured(profile.linkedIn) && <div className="contact-row"><Link2 size={19}/><div><small>LinkedIn</small><a href={profile.linkedIn}>{profile.linkedIn}</a></div></div>}{!emailLink && !isConfigured(profile.linkedIn) && <p className="contact-empty">Contact details are being updated. Please check back soon.</p>}</div></div></section>
 }
