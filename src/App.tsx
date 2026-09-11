@@ -29,6 +29,6 @@ function App() {
     return () => observer.disconnect()
   }, [])
 
-  return <><Navbar /><main><Hero /><About /><Expertise /><Modules /><Experience /><Projects /><Skills /><Approach /><Contact /></main><Footer /></>
+  return <><Navbar /><main id="main-content"><Hero /><About /><Expertise /><Modules /><Experience /><Projects /><Skills /><Approach /><Contact /></main><Footer /></>
 }
 export default App
