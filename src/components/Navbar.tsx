@@ -22,11 +22,11 @@ export function Navbar() {
 
   return <header className="nav-wrap">
     <nav className="nav container" aria-label="Main navigation">
-      <a className="brand" href="#home" onClick={close} aria-label={`${profile.name} home`}><img className="brand-mark" src={logo} alt="FA" /><span>{profile.name}</span></a>
+      <a className="brand" href="#home" onClick={close} aria-label={`${profile.name} home`}><img className="brand-mark" src={logo} alt="Firdaus Azlan logo" /><span>{profile.name}</span></a>
       <div className="nav-links">{links.map(([label, href]) => <a className={active === href.slice(1) ? 'is-active' : ''} href={href} key={href}>{label}</a>)}</div>
       <a className="nav-contact" href="#contact">Let’s talk</a>
-      <button className="menu-button" onClick={() => setOpen(!open)} aria-expanded={open} aria-label="Toggle navigation menu">{open ? <X /> : <Menu />}</button>
+      <button type="button" className="menu-button" onClick={() => setOpen(!open)} aria-expanded={open} aria-controls="mobile-navigation" aria-label="Toggle navigation menu">{open ? <X /> : <Menu />}</button>
     </nav>
-    {open && <div className="mobile-menu">{links.map(([label, href]) => <a className={active === href.slice(1) ? 'is-active' : ''} href={href} onClick={close} key={href}>{label}</a>)}</div>}
+    {open && <div id="mobile-navigation" className="mobile-menu">{links.map(([label, href]) => <a className={active === href.slice(1) ? 'is-active' : ''} href={href} onClick={close} key={href}>{label}</a>)}</div>}
   </header>
 }

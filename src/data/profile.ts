@@ -1,13 +1,13 @@
 export type Expertise = { title: string; description: string; items: string[]; icon: 'layers' | 'database' | 'network' | 'arrow' | 'code' }
 export type Experience = { project: string; role: string; period: string; environment: string; responsibilities: string[]; technologies: string[] }
-export type Project = { title: string; label: string; description: string; tags: string[]; role?: string; stack?: string[]; achievements?: string[] }
+export type Project = { title: string; label: string; description: string; tags: string[]; role?: string; stack?: string[]; achievements?: string[]; flow?: string[] }
 
 export const profile = {
   name: 'Firdaus Azlan',
   title: 'Infor SyteLine & Enterprise Systems Developer',
   role: 'ERP Development & Customization · CloudSuite Industrial, Data & Integration',
-  intro: 'I specialize in Infor SyteLine ERP development and customization, building practical software solutions for enterprise systems. My work includes SyteLine customization, IDOs, Mongoose forms, event handlers, custom assemblies, SQL and database development, ERP integration, automation, and data migration.',
-  about: 'I focus on solving real-world business requirements by extending and integrating SyteLine with reliable, maintainable solutions. From Mongoose forms and IDOs to custom assemblies, SQL, integrations, automation, and data migration, I connect business processes with the technical foundations needed to support them over time.',
+  intro: 'I specialize in Infor SyteLine ERP development and customization, building practical solutions across ERP integration, SQL and database development, automation, and data migration.',
+  about: 'I specialize in Infor SyteLine ERP development and customization, with experience across SQL and database development, system integration, automation, and data migration. My work focuses on solving real-world business requirements by extending ERP functionality, connecting systems, improving workflows, and building reliable tools around enterprise data.',
   location: '[LOCATION]',
   email: 'contact@firdausazlan.my',
   linkedIn: 'https://www.linkedin.com/in/firdaus-azlan-b29241193',
@@ -16,11 +16,11 @@ export const profile = {
 }
 
 export const expertise: Expertise[] = [
-  { title: 'ERP & SyteLine', description: 'Configuration and extension points within enterprise ERP workflows.', icon: 'layers', items: ['Infor SyteLine / CloudSuite Industrial', 'Forms & IDOs', 'Event Handlers & Workflows', 'Background Tasks & Reports'] },
-  { title: 'Database & SQL', description: 'Structured investigation and data-focused problem solving.', icon: 'database', items: ['Microsoft SQL Server', 'SQL Queries & Stored Procedures', 'Data Analysis', 'Performance Troubleshooting'] },
-  { title: 'System Integration', description: 'Connecting ERP processes with the wider application landscape.', icon: 'network', items: ['REST APIs & Web Services', 'ERP Integrations', 'External System Integrations', 'Email / SMTP Integrations'] },
-  { title: 'Data Migration', description: 'Careful movement of data between legacy and ERP environments.', icon: 'arrow', items: ['Data Extraction & Transformation', 'Data Validation', 'Data Loading', 'Migration Utilities'] },
-  { title: 'Application Development', description: 'Business-focused software and automation for repeatable operational work.', icon: 'code', items: ['Web Applications', 'REST API Development', 'Workflow Automation', 'Maintainable Utilities'] },
+  { title: 'Infor SyteLine Development', description: 'Extending SyteLine with maintainable forms, business logic, and ERP workflows.', icon: 'layers', items: ['Mongoose / WinStudio', 'Forms, IDOs & IDO Methods', 'Event Handlers', 'Custom Assemblies · C# / .NET'] },
+  { title: 'ERP Integration', description: 'Connecting SyteLine with banking, external systems, and operational services.', icon: 'network', items: ['Bank H2H & ACK Processing', 'SOAP / REST · XML / JSON', 'File-based Integrations', 'Data Exchange & Automation'] },
+  { title: 'Data Migration', description: 'Moving and validating ERP data across staging and live environments.', icon: 'arrow', items: ['Transformation & Mapping', 'Validation & Reconciliation', 'High-volume Processing', 'Migration Utilities'] },
+  { title: 'SQL & Database Development', description: 'Supporting ERP operations with structured data processing and troubleshooting.', icon: 'database', items: ['SQL Server', 'Complex Queries & Procedures', 'Data Validation', 'Performance Troubleshooting'] },
+  { title: 'Enterprise Software & Automation', description: 'Building supporting tools that improve ERP workflows and data management.', icon: 'code', items: ['React · TypeScript', 'Node.js · Express · NestJS', 'MySQL', 'Internal Tools & Automation'] },
 ]
 
 export const modules = ['Manufacturing', 'Job Management', 'Inventory', 'Purchasing', 'Sales', 'Planning / MRP', 'Finance', 'Accounts Payable', 'Accounts Receivable', 'General Ledger', 'Bank Reconciliation', 'Production & Scheduling']
@@ -36,8 +36,8 @@ export const experience: Experience[] = [
 export const projects: Project[] = [
   {
     title: 'Data Migration Tools',
-    label: 'Data Migration Tools',
-    description: 'A full-stack platform for secure, high-volume ERP data migration, reconciliation, and sync validation across staging and live environments.',
+    label: '03 · Data engineering',
+    description: 'A full-stack platform for secure, high-volume ERP data migration, reconciliation, and synchronization validation across staging and live environments.',
     role: 'Developer',
     stack: ['React', 'TypeScript', 'Vite', 'Node.js', 'Express', 'NestJS', 'MySQL', 'SOAP / REST'],
     achievements: [
@@ -51,11 +51,11 @@ export const projects: Project[] = [
     tags: ['Data reconciliation', 'ERP integration', 'Microservices'],
   },
   {
-    title: 'SyteLine Customization',
-    label: 'Infor SyteLine',
-    description: 'Enterprise ERP customization and extension work for Infor SyteLine, supporting customer-specific manufacturing and operational requirements through maintainable forms, business logic, and integrations.',
+    title: 'Infor SyteLine Customization',
+    label: '01 · Core ERP expertise',
+    description: 'Enterprise ERP customization and extension work using Infor SyteLine’s native customization framework and supporting technologies.',
     role: 'Developer',
-    stack: ['Infor SyteLine', 'SQL Server', 'IDOs', 'IDO Methods', 'Form Development', 'Event Handlers', 'C#', '.NET', 'Custom Assemblies', 'WinStudio', 'Mongoose', 'REST / SOAP', 'SQL', 'Stored Procedures'],
+    stack: ['Infor SyteLine', 'Mongoose', 'WinStudio', 'IDOs', 'IDO Methods', 'Event Handlers', 'C# / .NET', 'SQL Server', 'Custom Assemblies'],
     achievements: [
       'Developed and customized Infor SyteLine forms using Mongoose, extending standard ERP screens with custom fields, calculations, buttons, filters, workflow-specific functionality, and form-level validation to enforce customer-specific business rules.',
       'Designed custom IDOs and IDO extensions to expose business data and operations while maintaining SyteLine’s native business-object architecture.',
@@ -73,11 +73,12 @@ export const projects: Project[] = [
     tags: ['Forms', 'IDOs', 'Event handlers'],
   },
   {
-    title: 'ERP Integration & Automation',
-    label: 'Systems integration',
-    description: 'Integration and automation solutions connecting Infor SyteLine with external enterprise systems, financial institutions, and supporting services to automate data exchange, transaction processing, and reconciliation workflows.',
+    title: 'ERP Integration & Banking H2H',
+    label: '02 · Enterprise integration',
+    description: 'Integration and automation solutions connecting ERP systems with banking and external enterprise services.',
     role: 'Developer',
-    stack: ['IDOs', 'REST APIs', 'SQL Server', 'C# / .NET', 'Node.js', 'Infor ION', 'XML', 'JSON', 'SFTP', 'Bank H2H', 'ACK'],
+    stack: ['Bank H2H', 'SOAP', 'REST', 'XML', 'JSON', 'SFTP', 'SQL', 'Infor SyteLine'],
+    flow: ['Bank', 'H2H', 'Integration', 'Validation / Mapping', 'ERP', 'Reconciliation'],
     achievements: [
       'Developed and maintained Bank Host-to-Host (H2H) integrations to automate the exchange of banking transaction data between financial institutions and ERP environments.',
       'Designed workflows to validate, transform, and map external banking data into SyteLine-compatible structures before processing.',
@@ -94,11 +95,11 @@ export const projects: Project[] = [
 ]
 
 export const skills = [
-  { group: 'Enterprise Systems', items: ['Infor SyteLine', 'Infor CloudSuite Industrial', 'Infor OS', 'ERP'] },
-  { group: 'Database & Data', items: ['SQL Server', 'SQL', 'Stored Procedures', 'MySQL', 'Data Transformation'] },
-  { group: 'Software Development', items: ['JavaScript', 'TypeScript', 'React', 'REST API', 'VB.NET', 'C#'] },
-  { group: 'Tools & Automation', items: ['Git', 'GitHub', 'Visual Studio Code', 'n8n', 'Airtable', 'Supabase'] },
-  { group: 'AI Tools', items: ['Codex', 'Claude Code', 'Gemini'] },
+  { group: 'ERP', items: ['Infor SyteLine', 'Infor CloudSuite Industrial', 'Mongoose', 'WinStudio', 'IDOs', 'IDO Methods', 'Event Handlers', 'Custom Assemblies'] },
+  { group: 'Development', items: ['C#', '.NET', 'TypeScript', 'React', 'Node.js', 'Express', 'NestJS'] },
+  { group: 'Database', items: ['SQL Server', 'MySQL', 'SQL Development', 'Stored Procedures', 'Data Validation'] },
+  { group: 'Integration', items: ['SOAP', 'REST', 'XML', 'JSON', 'Bank H2H', 'SFTP'] },
+  { group: 'Engineering', items: ['Data Migration', 'Automation', 'Reconciliation', 'API Development', 'System Integration', 'Enterprise Applications'] },
 ]
 
 export const approach = [

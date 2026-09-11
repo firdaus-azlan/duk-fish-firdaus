@@ -9,6 +9,7 @@ import { Hero } from './components/Hero'
 import { Navbar } from './components/Navbar'
 import { Projects } from './components/Projects'
 import { Skills } from './components/Skills'
+import { Modules } from './components/Modules'
 
 function App() {
   useEffect(() => {
@@ -28,6 +29,6 @@ function App() {
     return () => observer.disconnect()
   }, [])
 
-  return <><Navbar /><main><Hero /><About /><Expertise /><Experience /><Projects /><Skills /><Approach /><Contact /></main><Footer /></>
+  return <><Navbar /><main><Hero /><About /><Expertise /><Modules /><Experience /><Projects /><Skills /><Approach /><Contact /></main><Footer /></>
 }
 export default App
