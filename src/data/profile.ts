@@ -12,7 +12,7 @@ export const profile = {
   email: 'contact@firdausazlan.my',
   linkedIn: 'https://www.linkedin.com/in/firdaus-azlan-b29241193',
   github: '[GITHUB URL]',
-  resume: '[RESUME URL]',
+  resume: '/resume/Firdaus_Azlan_Resume.pdf',
 }
 
 export const expertise: Expertise[] = [

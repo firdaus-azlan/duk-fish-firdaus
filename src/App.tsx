@@ -1,4 +1,5 @@
-import { useEffect } from 'react'
+import { ArrowUp } from 'lucide-react'
+import { useEffect, useState } from 'react'
 import { About } from './components/About'
 import { Approach } from './components/Approach'
 import { Contact } from './components/Contact'
@@ -12,6 +13,8 @@ import { Skills } from './components/Skills'
 import { Modules } from './components/Modules'
 
 function App() {
+  const [showBackToTop, setShowBackToTop] = useState(false)
+
   useEffect(() => {
     const elements = Array.from(document.querySelectorAll<HTMLElement>('[data-reveal]'))
     const show = (element: HTMLElement) => element.classList.add('is-visible')
@@ -29,6 +32,15 @@ function App() {
     return () => observer.disconnect()
   }, [])
 
-  return <><Navbar /><main id="main-content"><Hero /><About /><Expertise /><Modules /><Experience /><Projects /><Skills /><Approach /><Contact /></main><Footer /></>
+  useEffect(() => {
+    const updateVisibility = () => setShowBackToTop(window.scrollY > 500)
+    updateVisibility()
+    window.addEventListener('scroll', updateVisibility, { passive: true })
+    return () => window.removeEventListener('scroll', updateVisibility)
+  }, [])
+
+  const goToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
+
+  return <><Navbar /><main id="main-content"><Hero /><About /><Expertise /><Modules /><Experience /><Projects /><Skills /><Approach /><Contact /></main><Footer />{showBackToTop && <button className="back-to-top" type="button" onClick={goToTop} aria-label="Back to top" title="Back to top"><ArrowUp size={18} aria-hidden="true" /></button>}</>
 }
 export default App
