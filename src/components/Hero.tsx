@@ -6,7 +6,7 @@ export function Hero() {
   return <section id="home" className="hero section">
     <div className="container hero-grid">
       <div className="hero-copy">
-        <p className="eyebrow"><span /> Enterprise systems & software</p>
+        <p className="eyebrow"><span /> ERP development & customization</p>
         <h1>{profile.name}<em>{profile.title}</em></h1>
         <p className="hero-role">{profile.role}</p>
         <p className="hero-intro">{profile.intro}</p>
