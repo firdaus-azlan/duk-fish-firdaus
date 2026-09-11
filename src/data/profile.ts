@@ -6,7 +6,7 @@ export const profile = {
   name: 'Firdaus Azlan',
   title: 'Infor SyteLine & Enterprise Systems Developer',
   role: 'ERP Development & Customization · CloudSuite Industrial, Data & Integration',
-  intro: 'I specialize in Infor SyteLine ERP development and customization, building practical solutions across ERP integration, SQL and database development, automation, and data migration.',
+  intro: 'Infor SyteLine developer specializing in ERP customization, Mongoose forms, IDOs, event handlers, SQL Server, integrations, automation, and data migration.',
   about: 'I specialize in Infor SyteLine ERP development and customization, with experience across SQL and database development, system integration, automation, and data migration. My work focuses on solving real-world business requirements by extending ERP functionality, connecting systems, improving workflows, and building reliable tools around enterprise data.',
   location: '[LOCATION]',
   email: 'contact@firdausazlan.my',

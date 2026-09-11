@@ -71,6 +71,9 @@ footer { padding:36px 0; background:#07101d; color:white; }.footer-content { dis
 .project-card-3 .project-details { columns:2; column-gap:30px; }
 .project-flow { display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin:20px 0 3px; padding:12px; border:1px solid #dce8e7; border-radius:8px; background:#f4f9f8; }
 .project-flow span { display:inline-flex; align-items:center; gap:6px; color:#3c625d; font:500 9px 'DM Mono',monospace; }
+.project-purpose small { display:block; margin-top:18px; color:#344657; font:500 9px 'DM Mono',monospace; letter-spacing:.08em; text-transform:uppercase; }
+.project-purpose p { margin-top:7px; }
+.project-role strong { font-weight:800; }
 .project-flow b { color:var(--accent); font-size:13px; font-weight:400; }
 .architecture-flow { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-top:50px; }
 .architecture-layer { position:relative; display:flex; align-items:center; gap:14px; min-height:104px; padding:18px; border:1px solid #2e3e50; border-radius:12px; background:#111c2b; }
