@@ -1,6 +1,7 @@
 import { Menu, X } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { profile } from '../data/profile'
+import logo from '../../logo-fa.png'
 
 const links = [['Home', '#home'], ['About', '#about'], ['Experience', '#experience'], ['Projects', '#projects'], ['Skills', '#skills'], ['Contact', '#contact']]
 
@@ -21,7 +22,7 @@ export function Navbar() {
 
   return <header className="nav-wrap">
     <nav className="nav container" aria-label="Main navigation">
-      <a className="brand" href="#home" onClick={close} aria-label={`${profile.name} home`}><img className="brand-mark" src="/logo-fa.png" alt="FA" /><span>{profile.name}</span></a>
+      <a className="brand" href="#home" onClick={close} aria-label={`${profile.name} home`}><img className="brand-mark" src={logo} alt="FA" /><span>{profile.name}</span></a>
       <div className="nav-links">{links.map(([label, href]) => <a className={active === href.slice(1) ? 'is-active' : ''} href={href} key={href}>{label}</a>)}</div>
       <a className="nav-contact" href="#contact">Let’s talk</a>
       <button className="menu-button" onClick={() => setOpen(!open)} aria-expanded={open} aria-label="Toggle navigation menu">{open ? <X /> : <Menu />}</button>
